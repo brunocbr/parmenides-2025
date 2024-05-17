@@ -1,0 +1,16 @@
+\begin{conf-abstract}[]
+  {$title$}
+  {$first_name$ $last_name$}
+  {$institution$}
+  {$if(email)$$email$$endif$}
+\indexauthors{$if(index_name)$$index_name$@$endif$$last_name${,} $first_name$}
+$body$
+$if(biblio)$
+\begin{abstractbibliography}
+  $for(biblio)$
+  \item $biblio$
+  $endfor$
+\end{abstractbibliography}
+$endif$
+\end{conf-abstract}
+

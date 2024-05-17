@@ -1,0 +1,166 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+
+\documentclass[12pt]{book}
+
+\usepackage[a4paper,margin=3cm,innermargin=3cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Palatino}
+
+\usepackage{needspace}
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\sffamily\footnotesize}
+
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\makeindex[intoc]
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguages{french,greek}
+\setkeys{greek}{variant=ancient}
+\setotherlanguage[variant=ancient]{greek}
+
+\hypersetup{hidelinks}
+
+
+\newenvironment{conf-abstract}[5][]{
+  \needspace{10\baselineskip}
+  \begin{center}
+    { \renewcommand\textsuperscript[1]{}
+      \phantomsection\addcontentsline{toc}{section}
+      {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
+    }
+    {{\large\bfseries #2}\marginnote{#1}\par}
+    \medskip
+    {#3\par}
+    \smallskip
+    {#4\par}
+    \smallskip
+    {\small \href{#5}{#5}\par}
+  \end{center}
+}{%
+  \bigskip
+  \hrule
+  \bigskip
+}
+
+\newenvironment{abstractbibliography}
+               {\small%
+                 \begin{list}{}%
+                   {\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}% %% inútil?
+                   \setlength{\leftmargin}{0.5cm}%
+                   \setlength{\itemindent}{-\leftmargin}}}
+               {\end{list}}
+
+\usepackage{sectsty}
+\chapterfont{\centering}
+
+\usepackage{etoolbox}
+\newcommand{\indexauthors}[1]{%
+  \forcsvlist{\index}{#1}
+}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{-1}
+\pagestyle{plain}
+
+
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+
+\usepackage{xcolor}
+
+\definecolor{paleyellow}{RGB}{235, 235, 173}
+\definecolor{darkred}{RGB}{55, 20, 10}
+
+%% \title{$title$}
+%% $if(author)$
+%% \author{$author$}
+%% $endif$
+
+\usepackage{titlepic}
+
+
+\title{Book of Abstracts}
+\author{8\textsuperscript{th} Conference of the International Association for Presocratic Studies}
+
+\titlepic{\includegraphics[width=0.6\textwidth]{../jpeg/Arte_Rogerio.jpeg}}
+
+\date{Belo Horizonte, July 1\textsuperscript{st} to 5\textsuperscript{th}, 2024\\
+  Campus da Universidade Federal de Minas Gerais}
+
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Summary}%
+}
+
+\hyphenation{
+  Reh-bin-der
+  Leonardo
+  Ephesus
+  Nazyheli
+  Henrique
+  André
+}
+
+\begin{document}
+
+% \pagecolor{paleyellow}
+% \color{darkred}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+\vfill
+\begin{center}
+Last Revised: \today
+\end{center}
+
+\mainmatter
+
+\chapter{Abstracts}
+
+% Specify conf-abstract like this:
+% \begin{conf-abstract}[optional text going into the margin note]
+% {Title of Paper}
+% {Authors (use \textsuperscript as institution markers)}
+% {Institutions (use \textsuperscript as institution markers)}
+% \indexauthors{Lastname1!Firstname 1, Lastname2!Firstname2}
+% Abstract text
+% \end{conf-abstract}
+%
+% It's probably best to generate the abstracts from a
+% database or something via a script. Don't forget to
+% check through for any special characters that need to
+% be escaped.
+
+\input{abstracts}
+
+\backmatter
+\renewcommand{\indexname}{Author Index}
+\printindex
+
+\end{document}
+
