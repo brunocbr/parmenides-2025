@@ -94,7 +94,8 @@
 (defn process-files [dir f]
   (let [files (file-seq (io/file dir))]
     (->> files
-         (filter #(.endsWith (str %) ".txt"))
+         (filter (or #(.endsWith (str %) ".md")
+                     #(.endsWith (str %) ".txt")))
          (f))))
 
 (def cli-spec
