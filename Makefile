@@ -7,6 +7,7 @@ DATA_DIR=abstracts
 all: abstracts.tex book
 
 abstracts.tex:
+	mkdir -p $(OUTPUT_DIR)
 	bb resumos.bb --path $(DATA_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
 
 book: abstracts.tex
