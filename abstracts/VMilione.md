@@ -1,0 +1,11 @@
+---
+last_name: Milione
+first_name: Vitor
+title: "The Presocratics’ Reception in Xenophon’s *Memorabilia*: Socrates’ Views on Cosmology"
+institution: Université de Montréal
+email: vitormilione@gmail.com
+---
+
+The main goal of my paper is to analyze Socrates’ views on Presocratic cosmology outlined in the *Memorabilia*. My starting point will be *Memorabilia* 1.1, in which Xenophon defends Socrates against the accusation of impiety. The second key-text that must be considered is *Memorabilia* 4.7, in which we find a harsh criticism of cosmology in general and of Anaxagoras’ cosmology in particular. A close analysis of both texts raises three fundamental questions: Why does Xenophon articulate Presocratic cosmology with Socrates’s views on the divine? Why does his Socrates not only show little interest in cosmology, but also never encourage its thorough study? Why does Socrates severely criticize Presocratic cosmology and, more generally, astronomical and physical investigations?
+
+Indeed, all those questions touch upon some key-notions of Xenophon’s own philosophy, which must then be taken into account. First, I will argue that Xeno\-phon’s effort to dissociate Socrates from his predecessors, especially Anaxagoras, is groun\-ded on apologetical reasons, as he does with other contentious characters, such as Critias and Alcibiades. Second, I will argue that the contrast between, on the one hand, Socrates’ general views on Presocratic cosmology and, on the other hand, his own conception of the *kósmos* is grounded on a more fundamental contrast between the notions of divine wisdom and human wisdom (*anthropíne sophía*). Third, I will argue that Socrates’ general disinterest and criticism of the Presocratic cosmology is closely associated with the notion of “utility” (*ophéleia*) but also with his own conception of *philosophía*. The analytical path summarized here will be developed in order to highlight the fact that Xenophon sees an abyss separating the Presocratics’ philosophical speculations and Socrates’ own philosophical task, thus making the latter a true milestone in the history of Western thought.
