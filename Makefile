@@ -2,7 +2,7 @@ include .env
 
 OUTPUT_DIR=_output
 LATEX_DIR=latex
-DATA_DIR=data
+DATA_DIR=abstracts
 
 all: abstracts.tex book
 
