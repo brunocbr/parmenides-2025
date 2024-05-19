@@ -6,7 +6,7 @@ DATA_DIR=abstracts
 
 all: book
 
-$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(DATA_DIR)/*
+$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(DATA_DIR)/* $(LATEX_DIR)/*.latex
 	mkdir -p $(OUTPUT_DIR)
 	bb compile_abstracts.bb --path $(DATA_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
 
