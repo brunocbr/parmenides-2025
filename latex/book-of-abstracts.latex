@@ -9,6 +9,7 @@
 
 \usepackage{fontspec}
 \setmainfont{Palatino}
+\setsansfont{Optima}
 
 \usepackage{needspace}
 \usepackage{marginnote}
@@ -48,7 +49,7 @@
       \phantomsection\addcontentsline{toc}{section}
       {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
     }
-    {{\large\bfseries #2}\marginnote{#1}\par}
+    {\marginnote{#1}{\large\bfseries #2}\par}
     \medskip
     {#3\par}
     \smallskip

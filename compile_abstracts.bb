@@ -81,12 +81,14 @@
         author (str (:first_name header) " " (:last_name header))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) (:last_name header) "!" (:first_name header))
+     :session (or (:session header) "ZZZZZ")
      :contents (:out output)}))
 
 (defn process-latex [files]
   (->> files
        (map render-latex)
        (sort-by :author)
+       (sort-by :session)
        (map :contents)
        (str/join "\n\n")))
 
