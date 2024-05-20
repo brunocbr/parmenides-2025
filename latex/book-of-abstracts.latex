@@ -50,7 +50,7 @@
       \phantomsection\addcontentsline{toc}{section}
       {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
     }
-    {\marginnote{#1}{\large\bfseries #2}\par}
+    {{\large\bfseries #2}\marginnote{#1}\par}
     \medskip
     {#3\par}
     \smallskip

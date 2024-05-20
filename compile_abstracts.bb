@@ -60,6 +60,10 @@
        (map :contents)
        (str/join "\n\n")))
 
+(defn session->str [{:keys [date time]}]
+  (when (and date time)
+    (str date " @ " time)))
+
 (defn render-latex [file]
   (let [header (read-yaml-header file)
         output (tasks/shell {:out :string}
@@ -67,7 +71,7 @@
                                     (.getAbsolutePath file)))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))
-     :session (or (:session header) "ZZZZZ")
+     :session (or (session->str (:session header)) "ZZZZZ")
      :contents (:out output)}))
 
 (defn process-latex [files]
