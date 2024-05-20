@@ -35,32 +35,19 @@
                   :data-email (obfuscate-email email)}
            "✉️"]))
 
-
-(defn unicode-to-ascii [s]
-  (loop [acc ""
-         remaining s]
-    (if (empty? remaining)
-      acc
-      (let [c (first remaining)
-            ascii (int c)]
-        (recur (str acc
-                    (cond
-                      (and (>= ascii 65) (<= ascii 90)) c  ; A-Z
-                      (< ascii 128) c                      ; ASCII characters
-                      :else "?"))                          ; Non-ASCII characters
-               (rest remaining))))))
-
-(comment (unicode-to-ascii "Café and François"))
-
 (defn render-markdown [file]
   (let [header (read-yaml-header file)
         body   (read-body file)
-        author (str (:last_name header) ", " (:first_name header))]
-    {:author (unicode-to-ascii author)
+        index-name (:index_name header)
+        author (str (if index-name
+                      index-name
+                      (:last_name header))
+                    "!" (:first_name header))]
+    {:author author
      :contents (selmer/render
                 "#### {{author}}{% if institution %} ({{institution}}){% endif %}. {{title}}{% if email %} {{obfuscated-email|safe}}{% endif %}\n\n{{body}}\n\n"
                 {:title (:title header)
-                 :author author
+                 :author (str (:last_name header) ", " (:first_name header))
                  :email (:email header)
                  :obfuscated-email (obfuscated-email-span (:email header))
                  :institution (:institution header)
@@ -78,7 +65,6 @@
         output (tasks/shell {:out :string}
                             (format "pandoc -t latex --template=latex/conf-abstract.latex %s"
                                     (.getAbsolutePath file)))
-        author (str (:first_name header) " " (:last_name header))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))
      :session (or (:session header) "ZZZZZ")
@@ -122,11 +108,11 @@
 
 (comment
   (cli/parse-opts ["--path" "data"] cli-spec)
-  (-main ["--path" "data" "-f" "latex"])
+  (-main ["--path" "abstracts" "-f" "latex"])
 
-  (process-files "data" process-markdown)
-  (process-files "data" process-latex)
+  (process-files "abstracts" process-markdown)
+  (process-files "abstracts" process-latex)
 
-  (read-yaml-header "data/BLConte.txt")
-  (read-body "data/BLConte.txt")
-  (render-markdown "data/BLConte.txt"))
+  (read-yaml-header "abstracts/BLConte.txt")
+  (read-body "abstracts/BLConte.txt")
+  (render-markdown "abstracts/BLConte.txt"))
