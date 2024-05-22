@@ -84,23 +84,10 @@
 \setcounter{secnumdepth}{-1}
 \pagestyle{plain}
 
-
-
 \usepackage{graphicx}
-\usepackage{lipsum}
-
 \usepackage{xcolor}
 
-\definecolor{paleyellow}{RGB}{235, 235, 173}
-\definecolor{darkred}{RGB}{55, 20, 10}
-
-%% \title{$title$}
-%% $if(author)$
-%% \author{$author$}
-%% $endif$
-
 \usepackage{titlepic}
-
 
 \title{Book of Abstracts}
 \author{8\textsuperscript{th} Conference of the International Association for Presocratic Studies}
