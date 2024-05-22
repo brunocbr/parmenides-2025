@@ -60,8 +60,11 @@
        (map :contents)
        (str/join "\n\n")))
 
-(defn session->str [{:keys [date time]}]
-  (when (and date time)
+(defn session->str [{:keys [date time order]}]
+  (cond
+    (and date time order)
+    (str date " @ " time " @ " order)
+    (and date time)
     (str date " @ " time)))
 
 (defn render-latex [file]
