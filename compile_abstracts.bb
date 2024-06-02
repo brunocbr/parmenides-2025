@@ -39,6 +39,9 @@
   (->> (read-yaml-header file)
        (into {})))
 
+(defn get-sessions []
+  (get-data "data/sessions.yml"))
+
 (defn render-markdown [file]
   (let [header (read-yaml-header file)
         body   (read-body file)
@@ -49,7 +52,7 @@
                     "!" (:first_name header))]
     {:author author
      :contents (selmer/render
-                "#### {{author}}{% if institution %} ({{institution}}){% endif %}. {{title}}{% if email %} {{obfuscated-email|safe}}{% endif %}\n\n{{body}}\n\n"
+                "#### {{author}}{% if institution %} ({{institution}}){% endif %}. {{title}}{% if email %} {{obfuscated-email|safe}}{% endif %}\n\n" ;; {{body}}\n\n
                 {:title (:title header)
                  :author (str (:last_name header) ", " (:first_name header))
                  :email (:email header)
@@ -63,6 +66,38 @@
        (sort-by :author)
        (map :contents)
        (str/join "\n\n")))
+
+(defn render-program-entry [file]
+  (let [header (read-yaml-header file)
+        {:keys [id order]} (:session header)]
+    {:contents (selmer/render
+                "{{title}}  \n{{author}}{% if institution %}, {{institution}}{% endif %}"
+                {:title (:title header)
+                 :author (str (:first_name header) " " (:last_name header))
+                 :institution (:institution header)})
+     :session-id id
+     :session-order order}))
+
+(defn render-program-session [all-entries {:keys [id date time]}]
+  (let [session-entries (->> all-entries
+                             (filter #(= id (:session-id %)))
+                             (sort-by :session-order))]
+    (str/join "\n\n"
+              (cons (format "# Session %s" id),
+                    (for [e session-entries]
+                      (:contents e))))))
+
+(defn process-program [files]
+  (let [program-entries (->> files (map render-program-entry))
+        data (get-sessions)]
+    (->> data
+         :sessions
+         (map #(render-program-session program-entries %))
+         (str/join "\n\n"))))
+
+(comment
+  (process-program ))
+
 
 (defn session->str [{:keys [date time order]}]
   (cond
@@ -92,7 +127,7 @@
      :contents (:out output)}))
 
 (defn process-latex [files]
-  (let [data (get-data "data/sessions.yml")]
+  (let [data (get-sessions)]
     (->> files
          (map #(render-latex data %))
          (sort-by :author)
@@ -121,10 +156,11 @@
 (defn -main [args]
   (let [opts (cli/parse-opts args cli-spec)
         path (:path opts)]
-    (print 
+    (print
      (case (:format opts)
        "html" (process-files path process-markdown)
-       "latex" (process-files path process-latex)))))
+       "latex" (process-files path process-latex)
+       "program" (process-files path process-program)))))
 
 ;; (if-not (bound? #'*1))
 (-main *command-line-args*)
@@ -133,7 +169,7 @@
   (cli/parse-opts ["--path" "data"] cli-spec)
   (-main ["--path" "abstracts" "-f" "latex"])
 
-  (process-files "abstracts" process-markdown)
+  (process-files "abstracts" process-program)
   (process-files "abstracts" process-latex)
 
   (let [data (get-data "data/sessions.yml")]
