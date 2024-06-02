@@ -116,7 +116,7 @@
         session-id (get-in header [:session :id])
         session (get-by-id session-id sessions)
         output (tasks/shell {:out :string}
-                            (format "pandoc -t latex --template=latex/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" \"%s\""
+                            (format "pandoc -t latex --template=templates/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" \"%s\""
                                     (:date session)
                                     (:time session)
                                     (.getAbsolutePath file)))
