@@ -1,7 +1,7 @@
 include .env
 
 OUTPUT_DIR=_output
-TEMPLATE_DIR=latex
+TEMPLATE_DIR=templates
 ABSTRACTS_DIR=abstracts
 DATA_DIR=data
 
@@ -20,9 +20,10 @@ $(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(TEMPLATE_DIR)
 
 book: $(OUTPUT_DIR)/book-of-abstracts.pdf
 
-$(OUTPUT_DIR)/program.docx: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_DIR)/*.latex $(DATA_DIR)/*.yml
+$(OUTPUT_DIR)/program.docx: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_DIR)/*.docx $(DATA_DIR)/*.yml
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format program | \
-	pandoc -f markdown -t docx -o $(OUTPUT_DIR)/program.docx
+	pandoc -f markdown -t docx --reference-doc=$(TEMPLATE_DIR)/program.docx \
+		-o $(OUTPUT_DIR)/program.docx
 
 program: $(OUTPUT_DIR)/program.docx
 
