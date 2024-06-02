@@ -1,4 +1,7 @@
 ---
+session:
+  id: 1
+  order: 1
 last_name: Macé
 first_name: Arnaud
 title: Pherecydes’ winged oak and the vegetal cosmology of the Ancient Greeks

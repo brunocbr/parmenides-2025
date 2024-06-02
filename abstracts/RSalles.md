@@ -1,4 +1,7 @@
 ---
+session:
+  id: 1
+  order: 2
 last_name: Salles
 first_name: Ricardo
 title: Meteorology and basic substances in Anaximander

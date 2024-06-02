@@ -1,4 +1,7 @@
 ---
+session:
+  id: 8
+  order: 2
 last_name: Santos
 first_name: Bruno Fernandes
 title: "On the issue of reorganize Parmenides Poem: some remarks about the necessity of not separate δόξαι from cosmology"

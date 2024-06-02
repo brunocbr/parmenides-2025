@@ -1,4 +1,7 @@
 ---
+session:
+  id: 3
+  order: 1
 last_name: Bieda
 first_name: Esteban
 title: "Capturing the *lógos*. Different ways of knowledge in Heraclitus of Ephesus"

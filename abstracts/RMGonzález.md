@@ -1,4 +1,7 @@
 ---
+session:
+  id: 4
+  order: 3
 last_name: Moreno González
 first_name: Rafael
 title: How politically engaged were the pre-Socratic philosophers? The cases of Pythagoras, Parmenides, and Zeno

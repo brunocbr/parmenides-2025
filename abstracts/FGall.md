@@ -1,4 +1,7 @@
 ---
+session:
+  id: 13
+  order: 2
 last_name: Gall
 first_name: Felipe
 title: Why is Democritus the "laughing philosopher"?

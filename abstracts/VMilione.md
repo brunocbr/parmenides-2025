@@ -1,4 +1,7 @@
 ---
+session:
+  id: 16
+  order: 1
 last_name: Milione
 first_name: Vitor de Simoni
 title: "The Presocratics’ reception in Xenophon’s *Memorabilia*: Socrates’ critical approach to cosmology"

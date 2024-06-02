@@ -1,4 +1,7 @@
 ---
+session:
+  id: 15
+  order: 2
 last_name: Trépanier
 first_name: Simon
 title: "Heraclitus in Column IV of the *Derveni papyrus*: Three new suggestions"

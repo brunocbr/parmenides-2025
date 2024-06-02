@@ -1,4 +1,7 @@
 ---
+session:
+  id: 5
+  order: 2
 last_name: Assunção
 first_name: Teodoro Rennó
 title: "Two different propositions by Heraclitus about death: fragment 21 D and fragment 27 D"

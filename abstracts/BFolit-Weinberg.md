@@ -1,4 +1,7 @@
 ---
+session:
+  id: 1
+  order: 3
 last_name: Folit-Weinberg
 first_name: Benjamin
 title: No matter? *aêr* and causal minimalism in early Greek thought

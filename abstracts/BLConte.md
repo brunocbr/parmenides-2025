@@ -1,4 +1,7 @@
 ---
+session:
+  id: 8
+  order: 1
 last_name: Conte
 first_name: Bruno Loureiro
 title: Necessity and the Second Way of Inquiry in Parmenides’ Cosmological Thinking

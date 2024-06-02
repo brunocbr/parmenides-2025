@@ -1,4 +1,7 @@
 ---
+session:
+  id: 15
+  order: 3
 title: Enigma and interpretation in *Derveni Papyrus*
 last_name: Costa
 first_name: Michel Menezes da

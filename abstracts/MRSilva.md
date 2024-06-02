@@ -1,4 +1,7 @@
 ---
+session:
+  id: 3
+  order: 3
 last_name: Silva
 first_name: Martim
 title: "The word and the world: language and reality in Heraclitus of Ephesus"

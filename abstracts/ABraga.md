@@ -1,4 +1,7 @@
 ---
+session:
+  id: 17
+  order: 2
 last_name: Braga da Silva
 first_name: André Luiz
 title: "“Everything flows like a river”: a Heraclitean or Platonic creation?"

@@ -1,4 +1,7 @@
 ---
+session:
+  id: 7
+  order: 1
 last_name: Costa
 first_name: Alexandre
 title: On the interdependence between contents and literary forms in Parmenides’ Poem

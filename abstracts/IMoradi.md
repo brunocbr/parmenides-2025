@@ -1,4 +1,7 @@
 ---
+session:
+  id: 4
+  order: 2
 last_name: Moradi
 first_name: Ilan
 title: The contribution of Philolaus' concept of substance to Aristotle's theory of substance

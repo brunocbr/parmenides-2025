@@ -1,4 +1,7 @@
 ---
+session:
+  id: 18
+  order: 1
 last_name: Cummings
 first_name: Cara Rei
 title: "Epistemic Contextualism in Gorgias’s *Encomium of Helen*"

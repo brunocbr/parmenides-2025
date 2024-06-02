@@ -1,4 +1,7 @@
 ---
+session:
+  id: 2
+  order: 3
 last_name: Ménard
 first_name: Étienne
 title: Circular Motions and Cosmogonic Vortices

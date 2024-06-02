@@ -1,4 +1,7 @@
 ---
+session:
+  id: 4
+  order: 1
 last_name: Cornelli
 first_name: Gabriele
 title: Was Pythagoras Italic? Pythagoreanism and the ethnic superiority of “Italic philosophy”

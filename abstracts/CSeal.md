@@ -1,4 +1,7 @@
 ---
+session:
+  id: 12
+  order: 1
 last_name: Seal
 first_name: Carey
 title: Anaxagoras and the Autonomy of Ethics

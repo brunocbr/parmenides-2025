@@ -1,4 +1,7 @@
 ---
+session:
+  id: 20
+  order: 1
 last_name: Marino
 first_name: Silvio
 title: Humoral and atomistic theory on embryology in *De genitura/De natura Pueri* and Democritus

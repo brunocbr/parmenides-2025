@@ -1,4 +1,7 @@
 ---
+session:
+  id: 3
+  order: 2
 last_name: Kraus
 first_name: Manfred
 title: Heraclitus, Writing and Reading, and the Bow Fragment B 48

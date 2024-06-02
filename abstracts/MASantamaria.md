@@ -1,4 +1,7 @@
 ---
+session:
+  id: 14
+  order: 2
 last_name: Santamaría
 first_name: Marco Antonio
 title: "Dionysus, Demeter and the Homeric Heroes in Metrodorus’ *Allegoresis*"

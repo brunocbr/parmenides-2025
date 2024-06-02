@@ -1,4 +1,7 @@
 ---
+session:
+  id: 8
+  order: 3
 last_name: Rodegheri
 first_name: Viviane Veloso Pereira
 title: The journey of the mortal and the embrionary reflections in Parmenides' Poem

@@ -1,4 +1,7 @@
 ---
+session:
+  id: 7
+  order: 2
 last_name: Berruecos Frank
 first_name: Bernardo
 title: Parmenidean Interfaces. The interaction between meter, rhythm and textual criticism in Parmenides’ Poem.

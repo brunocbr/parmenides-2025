@@ -1,4 +1,7 @@
 ---
+session:
+  id: 7
+  order: 3
 last_name: Guerrieri
 first_name: Marco
 title: διάκοσμος ἐοικώς πάντα? A new interpretation of Parm. 28 B 1, 7, 8 DK

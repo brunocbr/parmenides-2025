@@ -1,4 +1,7 @@
 ---
+session:
+  id: 17
+  order: 1
 last_name: Molinari
 first_name: Nicholas J.
 title: "Beholding the Beauty of the New Philosophical Horizon: An Overview of the Acheloios-Thales Connection and its Significance for a 21st Century Philosophical Hermeneutic"

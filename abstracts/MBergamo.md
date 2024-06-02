@@ -1,4 +1,7 @@
 ---
+session:
+  id: 5
+  order: 1
 last_name: Bergamo
 first_name: Max
 title: '"Immortals Mortals – Mortals Immortals". A Short History and Some New Testimonies of Heraclitus’ Fragment B62 DK'

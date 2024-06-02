@@ -1,4 +1,7 @@
 ---
+session:
+  id: 9
+  order: 2
 last_name: Fontes
 first_name: Luís Márcio Nogueira
 title: Zeno’s anti-Eleaticism

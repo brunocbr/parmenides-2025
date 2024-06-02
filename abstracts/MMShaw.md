@@ -1,4 +1,7 @@
 ---
+session:
+  id: 11
+  order: 1
 last_name: Shaw
 first_name: Michael M.
 title: Ὑπένερθε in Homer and Empedocles

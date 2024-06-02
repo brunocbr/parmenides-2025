@@ -1,4 +1,7 @@
 ---
+session:
+  id: 20
+  order: 3
 last_name: Bartoš
 first_name: Hynek
 title: The Presocratic roots of the Hippocratic concept of balanced mixtures

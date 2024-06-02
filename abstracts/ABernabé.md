@@ -1,4 +1,7 @@
 ---
+session:
+  id: 15
+  order: 1
 last_name: Bernabé Pajares
 first_name: Alberto
 title: Dionysus in the Derveni Papyrus

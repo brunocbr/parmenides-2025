@@ -1,4 +1,7 @@
 ---
+session:
+  id: 11
+  order: 3
 last_name: Aguirre de la Luz
 first_name: Nazyheli
 title: Mechanisms of Sense Perception and Knowledge in Empedocles

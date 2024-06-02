@@ -1,4 +1,7 @@
 ---
+session:
+  id: 2
+  order: 2
 last_name: Sattler
 first_name: Barbara
 title: The void in early Pythagoreanism

@@ -1,4 +1,7 @@
 ---
+session:
+  id: 12
+  order: 3
 last_name: Campos
 first_name: Rogério Gimenes de
 title: Archelaus' philosophy

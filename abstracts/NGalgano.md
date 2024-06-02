@@ -1,4 +1,7 @@
 ---
+session:
+  id: 10
+  order: 2
 last_name: Galgano
 first_name: Nicola Stefano
 title: "The second thesis of Gorgia’s treatise *On what is not or on nature* and its relation with Eleaticism"

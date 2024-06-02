@@ -1,4 +1,7 @@
 ---
+session:
+  id: 13
+  order: 3
 last_name: Peixoto
 first_name: Miriam Campolina Diniz
 title: The plurivocity and centrality of the notion of measure in the framework of Democritus' ethical reflection

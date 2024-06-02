@@ -1,4 +1,7 @@
 ---
+session:
+  id: 19
+  order: 1
 last_name: Rodríguez
 first_name: Teresa
 title: "The reception of Empedocles in the Renaissance: Pico della Mirandola"

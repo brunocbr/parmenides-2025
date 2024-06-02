@@ -1,4 +1,7 @@
 ---
+session:
+  id: 6
+  order: 2
 last_name: Parker
 first_name: Luke
 title: "*Phusis* and *Logos* in Heraclitus"

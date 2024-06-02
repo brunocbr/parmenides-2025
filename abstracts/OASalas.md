@@ -1,4 +1,7 @@
 ---
+session:
+  id: 2
+  order: 1
 last_name: Álvarez Salas
 first_name: Omar Daniel
 index_name: Alvarez Salas

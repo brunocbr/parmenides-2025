@@ -1,4 +1,7 @@
 ---
+session:
+  id: 9
+  order: 1
 last_name: Berti
 first_name: Matilde
 title: "Binary Oppositions in Greek Philosophy: Female and Male in Parmenides"

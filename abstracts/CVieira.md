@@ -1,4 +1,7 @@
 ---
+session:
+  id: 6
+  order: 1
 last_name: Vieira
 first_name: Celso
 title: The persistence of human-scale items in Heraclitus

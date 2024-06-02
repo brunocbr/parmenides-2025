@@ -1,4 +1,7 @@
 ---
+session:
+  id: 12
+  order: 2
 last_name: Sanchez Castro
 first_name: Liliana Carolina
 title: Aristotle on Anaxagoras' Intellect

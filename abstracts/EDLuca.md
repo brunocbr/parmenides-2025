@@ -1,4 +1,7 @@
 ---
+session:
+  id: 17
+  order: 3
 last_name: D'Luca
 first_name: Erick
 title: Pythagorean Vestiges in Plato’s *Timaeus*

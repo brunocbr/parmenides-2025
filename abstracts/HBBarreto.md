@@ -1,4 +1,7 @@
 ---
+session:
+  id: 20
+  order: 2
 last_name: Barreto
 first_name: Henrique Buldrini
 title: "Certainly, a physician: a discussion about the authorship of *De Arte*"

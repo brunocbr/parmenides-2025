@@ -1,4 +1,7 @@
 ---
+session:
+  id: 18
+  order: 2
 last_name: Brémond
 first_name: Mathilde
 title: Does Gorgias have a coherent theory of language?
