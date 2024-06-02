@@ -1,4 +1,4 @@
-\begin{conf-abstract}[$if(session)$$session.date$\\$session.time$$endif$]
+\begin{conf-abstract}[$if(session)$$date$\\$time$\\Session $session.id$$endif$]
   {$title$}
   {$first_name$ $last_name$}
   {$institution$}

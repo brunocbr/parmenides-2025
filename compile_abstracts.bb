@@ -35,6 +35,10 @@
                   :data-email (obfuscate-email email)}
            "✉️"]))
 
+(defn get-data [file]
+  (->> (read-yaml-header file)
+       (into {})))
+
 (defn render-markdown [file]
   (let [header (read-yaml-header file)
         body   (read-body file)
@@ -67,23 +71,35 @@
     (and date time)
     (str date " @ " time)))
 
-(defn render-latex [file]
+(defn get-by-id [id m]
+  (->> m
+       (filter #(= id (:id %)))
+       first))
+
+(defn render-latex [{:keys [sessions]} file]
   (let [header (read-yaml-header file)
+        session-id (get-in header [:session :id])
+        session (get-by-id session-id sessions)
         output (tasks/shell {:out :string}
-                            (format "pandoc -t latex --template=latex/conf-abstract.latex %s"
+                            (format "pandoc -t latex --template=latex/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" \"%s\""
+                                    (:date session)
+                                    (:time session)
                                     (.getAbsolutePath file)))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))
-     :session (or (session->str (:session header)) "ZZZZZ")
+     :session session-id
+     :order (get-in header [:session :order])
      :contents (:out output)}))
 
 (defn process-latex [files]
-  (->> files
-       (map render-latex)
-       (sort-by :author)
-       (sort-by :session)
-       (map :contents)
-       (str/join "\n\n")))
+  (let [data (get-data "data/sessions.yml")]
+    (->> files
+         (map #(render-latex data %))
+         (sort-by :author)
+         (sort-by :order)
+         (sort-by :session)
+         (map :contents)
+         (str/join "\n\n"))))
 
 
 (defn process-files [dir f]
@@ -110,7 +126,7 @@
        "html" (process-files path process-markdown)
        "latex" (process-files path process-latex)))))
 
-(comment)
+;; (if-not (bound? #'*1))
 (-main *command-line-args*)
 
 (comment
@@ -120,6 +136,8 @@
   (process-files "abstracts" process-markdown)
   (process-files "abstracts" process-latex)
 
-  (read-yaml-header "abstracts/BLConte.txt")
-  (read-body "abstracts/BLConte.txt")
-  (render-markdown "abstracts/BLConte.txt"))
+  (let [data (get-data "data/sessions.yml")]
+    (render-latex data (io/file "abstracts/ABraga.md")))
+
+  (read-yaml-header "abstracts/BLConte.md")
+  (read-body "abstracts/BLConte.md"))

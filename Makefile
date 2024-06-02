@@ -2,13 +2,14 @@ include .env
 
 OUTPUT_DIR=_output
 LATEX_DIR=latex
-DATA_DIR=abstracts
+ABSTRACTS_DIR=abstracts
+DATA_DIR=data
 
 all: book
 
-$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(DATA_DIR)/* $(LATEX_DIR)/*.latex
+$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(LATEX_DIR)/*.latex $(DATA_DIR)/*.yml
 	mkdir -p $(OUTPUT_DIR)
-	bb compile_abstracts.bb --path $(DATA_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
+	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
 
 $(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(LATEX_DIR)/*.latex
 	cd $(OUTPUT_DIR) && \
