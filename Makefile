@@ -6,7 +6,7 @@ ABSTRACTS_DIR=abstracts
 DATA_DIR=data
 GOOGLE_CREDENTIALS=credentials.json
 
-all: book
+all: create_drive_subfolders generate_drive_links book
 
 $(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_DIR)/*.latex $(DATA_DIR)/*.yml
 	mkdir -p $(OUTPUT_DIR)
