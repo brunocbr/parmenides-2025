@@ -62,6 +62,22 @@ make deploy_pdf
 
 This will upload the PDF to the specified AWS S3 bucket.
 
+To create Google Drive subfolders using the author names:
+
+```sh
+make create_drive_subfolders
+```
+
+This will create the subfolders using the Google API.
+
+To generate the links database for the author subfolders:
+
+```sh
+make generate_drive_links
+```
+
+This will create a database containing the links to the author subfolders, which will be used if available in the generation of the Book of Abstracts.
+
 ## Contributing
 
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
