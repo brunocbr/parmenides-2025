@@ -36,6 +36,28 @@
         new-token)
       token)))
 
+(defn list-subfolders [service folder-id]
+  (let [response (client/get (str "https://www.googleapis.com/drive/v3/files")
+                             {:query-params {:q (str "'" folder-id "' in parents and mimeType = 'application/vnd.google-apps.folder'")
+                                             :spaces "drive"
+                                             :fields "nextPageToken, files(id, name)"}
+                              :headers {"Authorization" (str "Bearer " (:access_token service))}})]
+    (if (= 200 (:status response))
+      (json/parse-string (:body response) true)
+      (do
+        (println "Error listing subfolders:" (:body response))
+        (System/exit 1)))))
+
+(defn get-link [service file-id]
+  (let [response (client/get (str "https://www.googleapis.com/drive/v3/files/" file-id)
+                             {:query-params {:fields "webViewLink"}
+                              :headers {"Authorization" (str "Bearer " (:access_token service))}})]
+    (if (= 200 (:status response))
+      (-> response :body json/parse-string (get "webViewLink"))
+      (do
+        (println "Error getting link:" (:body response))
+        (System/exit 1)))))
+
 (defn create-subfolder [service parent-id subfolder-name]
   (let [response (client/post "https://www.googleapis.com/drive/v3/files"
                               {:headers {"Authorization" (str "Bearer " (:access_token service))
@@ -46,6 +68,23 @@
     (if (= 200 (:status response))
       (println "Created subfolder:" subfolder-name)
       (println "Error creating subfolder:" subfolder-name ":" (:body response)))))
+
+(defn escape-query-param [s]
+  (str/replace s "'" "\\'"))
+
+(defn folder-exists? [service folder-id folder-name]
+  (let [escaped-name (escape-query-param folder-name)
+        response (client/get (str "https://www.googleapis.com/drive/v3/files")
+                             {:query-params {:q (str "'" folder-id "' in parents and name = '" escaped-name "' and trashed = false and mimeType = 'application/vnd.google-apps.folder'")
+                                             :spaces "drive"
+                                             :fields "files(id, name)"}
+                              :headers {"Authorization" (str "Bearer " (:access_token service))}})]
+    (if (= 200 (:status response))
+      (let [files (-> response :body json/parse-string (get "files"))]
+        (not (empty? files)))
+      (do
+        (println "Error checking folder existence:" (:body response))
+        (System/exit 1)))))
 
 (defn -main [& args]
   (if (not= (count args) 2)
@@ -60,8 +99,9 @@
         service (get-service client-id client-secret)
         subfolder-names (line-seq (java.io.BufferedReader. *in*))]
     (doseq [subfolder-name subfolder-names]
-      (create-subfolder service parent-id subfolder-name))))
+      (if-not (folder-exists? service parent-id subfolder-name)
+        (create-subfolder service parent-id subfolder-name)
+        (println (str "A subfolder named \"" subfolder-name "\" already exists, skipping."))))))
 
 ;; Call the main function with command-line arguments
 (apply -main *command-line-args*)
-
