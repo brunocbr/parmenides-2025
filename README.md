@@ -44,6 +44,24 @@ To generate the links to subfolders on a shared Drive folder, one per author nam
      ```
  4. Set `GOOGLE_DRIVE_FOLDER_ID` in your `.env` file to the corresponding folder id.
 
+### Example `.env` file
+
+```sh
+# AWS Configuration
+export AWS_DEFAULT_REGION=sa-east-1
+export AWS_ACCESS_KEY_ID=<your access key>
+export AWS_SECRET_ACCESS_KEY=<your secret>
+
+# S3 Bucket Name
+export AWS_S3_BUCKET_NAME=iaps-8
+
+# Target PDF File Name
+export PDF_TARGET_NAME=IAPS_8_Book_of_Abstracts.pdf
+
+# Google Drive Folder ID
+export GOOGLE_DRIVE_FOLDER_ID=<the folder id>
+```
+
 ## Usage
 
 To generate the Book of Abstracts in PDF format, use the following command:
