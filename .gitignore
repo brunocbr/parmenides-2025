@@ -1,2 +1,4 @@
 .env
 _output/
+credentials.json
+token.json
