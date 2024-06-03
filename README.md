@@ -19,7 +19,7 @@ To generate the Book of Abstracts, you will need the following tools installed o
 
 To generate the links to subfolders on a shared Drive folder, one per author name, ensure you have the following:
 
-1. *Google Cloud Project**: Create a Google Cloud project, enable the Google Drive API, and create OAuth2 credentials.
+1. **Google Cloud Project**: Create a Google Cloud project, enable the Google Drive API, and create OAuth2 credentials.
 2. **Generate `credentials.json`**:
    - Go to the [Google Cloud Console](https://console.cloud.google.com/).
    - Create a new project or select an existing project.
