@@ -129,7 +129,7 @@
         fullname (str (:first_name header) " " (:last_name header))
         drive-url (get drive fullname)
         output (tasks/shell {:out :string}
-                            (format "pandoc -t latex --template=templates/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" -M url=\"%s\" \"%s\""
+                            (format "pandoc -t latex --template=templates/conf-abstract.latex -V date=\"%s\" -V time=\"%s\" -V url=\"%s\" \"%s\""
                                     (:date session)
                                     (:time session)
                                     drive-url
