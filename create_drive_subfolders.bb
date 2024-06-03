@@ -36,18 +36,6 @@
         new-token)
       token)))
 
-(defn list-subfolders [service folder-id]
-  (let [response (client/get (str "https://www.googleapis.com/drive/v3/files")
-                             {:query-params {:q (str "'" folder-id "' in parents and mimeType = 'application/vnd.google-apps.folder'")
-                                             :spaces "drive"
-                                             :fields "nextPageToken, files(id, name)"}
-                              :headers {"Authorization" (str "Bearer " (:access_token service))}})]
-    (if (= 200 (:status response))
-      (json/parse-string (:body response) true)
-      (do
-        (println "Error listing subfolders:" (:body response))
-        (System/exit 1)))))
-
 (defn get-link [service file-id]
   (let [response (client/get (str "https://www.googleapis.com/drive/v3/files/" file-id)
                              {:query-params {:fields "webViewLink"}
