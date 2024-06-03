@@ -4,7 +4,10 @@
          '[hiccup.core  :as h]
          '[babashka.tasks :as tasks]
          '[babashka.cli :as cli]
-         '[babashka.fs :as fs])
+         '[babashka.fs :as fs]
+         '[clojure.edn :as edn])
+
+(def google-drive-data "data/google_drive.edn")
 
 (defn inspect [x]
   (prn "+" x)
@@ -41,6 +44,14 @@
 
 (defn get-sessions []
   (get-data "data/sessions.yml"))
+
+(defn get-drive []
+  (if (fs/exists? google-drive-data)
+    (assoc {} :drive
+           (->> google-drive-data
+                slurp
+                edn/read-string
+                (into {})))))
 
 (defn render-markdown [file]
   (let [header (read-yaml-header file)
@@ -111,14 +122,17 @@
        (filter #(= id (:id %)))
        first))
 
-(defn render-latex [{:keys [sessions]} file]
+(defn render-latex [{:keys [sessions drive]} file]
   (let [header (read-yaml-header file)
         session-id (get-in header [:session :id])
         session (get-by-id session-id sessions)
+        fullname (str (:first_name header) " " (:last_name header))
+        drive-url (get drive fullname)
         output (tasks/shell {:out :string}
-                            (format "pandoc -t latex --template=templates/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" \"%s\""
+                            (format "pandoc -t latex --template=templates/conf-abstract.latex -M date=\"%s\" -M time=\"%s\" -M url=\"%s\" \"%s\""
                                     (:date session)
                                     (:time session)
+                                    drive-url
                                     (.getAbsolutePath file)))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))
@@ -127,7 +141,7 @@
      :contents (:out output)}))
 
 (defn process-latex [files]
-  (let [data (get-sessions)]
+  (let [data (merge (get-sessions) (get-drive))]
     (->> files
          (map #(render-latex data %))
          (sort-by :author)

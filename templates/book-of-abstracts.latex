@@ -43,14 +43,14 @@
 
 %% Based on LianTze Lim's template
 %% https://www.overleaf.com/latex/examples/a-basic-conference-abstract-booklet/tkjfcvzgjrnd
-\newenvironment{conf-abstract}[5][]{
+\newenvironment{conf-abstract}[6][]{
   \needspace{10\baselineskip}
   \begin{center}
     { \renewcommand\textsuperscript[1]{}
       \phantomsection\addcontentsline{toc}{section}
       {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
     }
-    {{\large\bfseries #2}\marginnote{#1}\par}
+    {{\large\bfseries \href{#6}{#2}}\marginnote{#1}\par}
     \medskip
     {#3\par}
     \smallskip
