@@ -56,7 +56,7 @@
     \smallskip
     {#4\par}
     \smallskip
-    {\small \href{#5}{#5}\par}
+    {\small \href{mailto:#5}{#5}\par}
   \end{center}
 }{%
   \bigskip
