@@ -136,6 +136,12 @@
          (map :contents)
          (str/join "\n\n"))))
 
+(defn process-author-list [files]
+  (->>
+   (for [f files]
+     (let [h (read-yaml-header f)]
+       (str (:first_name h) " " (:last_name h))))
+   (str/join "\n")))
 
 (defn process-files [dir f]
   (let [files (file-seq (io/file dir))]
@@ -160,7 +166,8 @@
      (case (:format opts)
        "html" (process-files path process-markdown)
        "latex" (process-files path process-latex)
-       "program" (process-files path process-program)))))
+       "program" (process-files path process-program)
+       "authors" (process-files path process-author-list)))))
 
 ;; (if-not (bound? #'*1))
 (-main *command-line-args*)
