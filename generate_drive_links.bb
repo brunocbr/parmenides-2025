@@ -37,7 +37,7 @@
 
 (defn list-subfolders [service folder-id]
   (let [response (client/get (str "https://www.googleapis.com/drive/v3/files")
-                             {:query-params {:q (str "'" folder-id "' in parents and mimeType = 'application/vnd.google-apps.folder'")
+                             {:query-params {:q (str "'" folder-id "' in parents and trashed = false and mimeType = 'application/vnd.google-apps.folder'")
                                              :spaces "drive"
                                              :fields "nextPageToken, files(id, name)"}
                               :headers {"Authorization" (str "Bearer " (:access_token service))}})]
