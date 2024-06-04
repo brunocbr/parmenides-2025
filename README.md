@@ -96,6 +96,14 @@ make generate_drive_links
 
 This will create a database containing the links to the author subfolders, which will be used if available in the generation of the Book of Abstracts.
 
+After the subfolders are created, you may send invitations to the authors:
+
+```sh
+make send_drive_invitations
+```
+
+This will send invitations to the author email addresses with their respectives links, granting write access to a subfolder.
+
 ## Contributing
 
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
