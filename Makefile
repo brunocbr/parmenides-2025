@@ -45,7 +45,7 @@ generate_drive_links:
 		>$(DATA_DIR)/google_drive.edn
 
 send_drive_invitations:
-	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format authors | \
+	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format emails | \
 	bb drive_invitations.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS)
 
 clean_drive_links:
