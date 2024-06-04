@@ -1,6 +1,6 @@
 # IAPS 8th Conference Book of Abstracts Generator
 
-This repository contains the tools to generate the Book of Abstracts for the 8th Conference of the International Association for Presocratic Studies (IAPS).
+This repository contains the tools to generate the Book of Abstracts for the 8th Conference of the International Association for Presocratic Studies (IAPS), and manage Google Drive presentation folders.
 
 ## Requirements
 
