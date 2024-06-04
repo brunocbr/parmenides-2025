@@ -4,7 +4,7 @@ session:
   order: 3
 last_name: Rodegheri
 first_name: Viviane Veloso Pereira
-title: The journey of the mortal and the embrionary ethical reflections in Parmenides' Poem
+title: The mortal's journey and the embryonic ethical reflections in Parmenides' Poem
 institution: Universidade Federal do Rio de Janeiro
 email: vivianerodegheri@gmail.com
 ---
