@@ -157,6 +157,14 @@
        (str (:first_name h) " " (:last_name h))))
    (str/join "\n")))
 
+(defn process-author-emails [files]
+  (->>
+   (for [f files]
+     (let [h (read-yaml-header f)]
+       {(str (:first_name h) " " (:last_name h))
+        (str/split (:email h) #";\s+")}))
+   (into {})))
+
 (defn process-files [dir f]
   (let [files (file-seq (io/file dir))]
     (->> files
@@ -181,7 +189,8 @@
        "html" (process-files path process-markdown)
        "latex" (process-files path process-latex)
        "program" (process-files path process-program)
-       "authors" (process-files path process-author-list)))))
+       "authors" (process-files path process-author-list)
+       "emails" (process-files path process-author-emails)))))
 
 ;; (if-not (bound? #'*1))
 (-main *command-line-args*)
@@ -192,6 +201,8 @@
 
   (process-files "abstracts" process-program)
   (process-files "abstracts" process-latex)
+  (-> (process-files "abstracts" process-author-emails)
+      (get "Sarah Feldman"))
 
   (let [data (get-data "data/sessions.yml")]
     (render-latex data (io/file "abstracts/ABraga.md")))
