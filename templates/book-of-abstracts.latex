@@ -130,6 +130,7 @@ Last Revised: \today
 
 \mainmatter
 
+
 \chapter{Abstracts}
 
 % Specify conf-abstract like this:
@@ -147,6 +148,39 @@ Last Revised: \today
 % be escaped.
 
 \input{abstracts}
+
+\chapter{Organizing Committee}
+
+\begin{center}
+  \begin{tabular}{l}
+    President: \\
+    Miriam Campolina Diniz Peixoto \\
+    \\
+    Alexandre Costa \\
+    Bruno Loureiro Conte \\
+    Celso Vieira \\
+    Gustavo Laet Gomes \\
+    Henrique Buldrini \\
+    Liliana Carolina Sanchez Castro \\
+    Luís Márcio Nogueira Fontes \\
+    Marcos Damásio \\
+    Martim Silva \\
+    Michel Menezes da Costa \\
+    Rogério Gimenes de Campos \\
+    Silvio Marino
+  \end{tabular}
+\end{center}
+
+
+\chapter{Credits}
+
+\begin{center}
+  \begin{tabular}{l}
+    \textbf{Cover Image:} \\ \\
+    \textit{Blue Moon}, Rogério Gimenes de Campos, 2023.
+  \end{tabular}
+\end{center}
+
 
 \backmatter
 \renewcommand{\indexname}{Author Index}
