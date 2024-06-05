@@ -8,11 +8,11 @@ GOOGLE_CREDENTIALS=credentials.json
 
 all: create_drive_subfolders generate_drive_links book
 
-$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_DIR)/*.latex $(DATA_DIR)/*.yml
+$(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_DIR)/*.latex $(DATA_DIR)/*
 	mkdir -p $(OUTPUT_DIR)
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
 
-$(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(TEMPLATE_DIR)/*.latex $(DATA_DIR)/*
+$(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(TEMPLATE_DIR)/*.latex
 	cd $(OUTPUT_DIR) && \
 	xelatex ../$(TEMPLATE_DIR)/book-of-abstracts.latex && \
 	while grep -q 'Rerun to get' book-of-abstracts.log || grep -q 'LaTeX Warning: Label(s) may have changed' book-of-abstracts.log; do \
