@@ -4,7 +4,7 @@ session:
   order: 1
 last_name: Cummings
 first_name: Cara Rei
-title: "Epistemic Contextualism in Gorgias’s *Encomium of Helen*"
+title: "Defending Gorgias, the Comedian"
 institution: Morgan State University
 email: cara.cummings@morgan.edu
 ---

@@ -1,7 +1,7 @@
 ---
 session:
-  id: 14
-  order: 1
+  id: 12
+  order: 2
 last_name: Deniz Machín
 first_name: Deyvis
 title: "Diogenes of Apollonia: ἀνὴρ φυσικός"

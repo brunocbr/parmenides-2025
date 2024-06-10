@@ -1,6 +1,6 @@
 ---
 session:
-  id: 15
+  id: 16
   order: 3
 title: Enigma and interpretation in *Derveni Papyrus*
 last_name: Costa
