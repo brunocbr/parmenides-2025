@@ -41,23 +41,20 @@ sessions:
     time: 9h30
   - id: 14
     date: 4 Jul
-    time: 14h00
+    time: 14h30
   - id: 15
     date: 4 Jul
-    time: 14h00
+    time: 14h30
   - id: 16
     date: 4 Jul
     time: 16h30
   - id: 17
-    date: 4 Jul
-    time: 16h30
+    date: 5 Jul
+    time: 10h00
   - id: 18
     date: 5 Jul
     time: 10h00
   - id: 19
-    date: 5 Jul
-    time: 10h30
-  - id: 20
     date: 5 Jul
     time: 14h00
 ---

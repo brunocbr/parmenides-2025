@@ -1,7 +1,7 @@
 ---
 session:
   id: 15
-  order: 3
+  order: 2
 last_name: Nakayama
 first_name: Patricia
 title: Notes on the Reception of Democritus in the Art of eloquence of Cicero and Thomas Hobbes
