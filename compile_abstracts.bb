@@ -163,7 +163,8 @@
      (let [h (read-yaml-header f)]
        {(str (:first_name h) " " (:last_name h))
         (str/split (:email h) #";\s+")}))
-   (into {})))
+   (into {})
+   pr-str))
 
 (defn process-files [dir f]
   (let [files (file-seq (io/file dir))]
