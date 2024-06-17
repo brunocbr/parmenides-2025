@@ -1,7 +1,7 @@
 ---
 session:
   id: 10
-  order: 3
+  order: 2
 last_name: Furtado
 first_name: Daniela Brinati
 title: Is the trustworthiness of *logos* sufficient to lead the way to knowledge?

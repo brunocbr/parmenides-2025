@@ -4,7 +4,7 @@ session:
   order: 2
 last_name: Santamaría
 first_name: Marco Antonio
-title: "Dionysus, Demeter and the Homeric Heroes in Metrodorus’ *Allegoresis*"
+title: "Dionysus, Demeter and the Homeric Heroes in Metrodorus’ Allegoresis"
 institution: Universidad Complutense de Madrid
 email: marcoa22@ucm.es
 biblio:

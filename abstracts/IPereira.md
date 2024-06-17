@@ -1,7 +1,7 @@
 ---
 session:
   id: 11
-  order: 2
+  order: 1
 last_name: Pereira
 first_name: Ivanete
 title: "Empedocles and the sacred trees: an essay to expand readings of fr. DK 31 B 140"
