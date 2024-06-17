@@ -57,6 +57,18 @@
         (println "Error getting link:" (:body response))
         (System/exit 1)))))
 
+(defn contains-files? [service folder-id]
+  (let [response (client/get (str "https://www.googleapis.com/drive/v3/files")
+                             {:query-params {:q (str "'" folder-id "' in parents")
+                                             :spaces "drive"
+                                             :fields "nextPageToken, files(id, name)"}
+                              :headers {"Authorization" (str "Bearer " (:access_token service))}})]
+    (if (= 200 (:status response))
+      (not (empty? (:files (json/parse-string (:body response) true))))
+      (do
+        (println "Error checking contents of folder:" (:body response))
+        (System/exit 1)))))
+
 (defn -main [& args]
   (if (not= (count args) 2)
     (do
@@ -71,9 +83,11 @@
         subfolders (list-subfolders service folder-id)]
     (->> 
      (for [subfolder (:files subfolders)]
-       (let [link (get-link service (:id subfolder))]
+       (let [link (get-link service (:id subfolder))
+             files? (contains-files? service (:id subfolder))]
          {(:name subfolder)
-          link}
+          {:link link
+           :contains-files? files?}}
          ))
      (into [])
      pr-str

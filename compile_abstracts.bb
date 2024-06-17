@@ -127,12 +127,13 @@
         session-id (get-in header [:session :id])
         session (get-by-id session-id sessions)
         fullname (str (:first_name header) " " (:last_name header))
-        drive-url (get drive fullname)
+        drive-data (get drive fullname)
         output (tasks/shell {:out :string}
-                            (format "pandoc -t latex --template=templates/conf-abstract.latex -V date=\"%s\" -V time=\"%s\" -V url=\"%s\" \"%s\""
+                            (format "pandoc -t latex --template=templates/conf-abstract.latex -V date=\"%s\" -V time=\"%s\" -V url=\"%s\" -V has_files=\"%s\" \"%s\""
                                     (:date session)
                                     (:time session)
-                                    drive-url
+                                    (:link drive-data)
+                                    (boolean (:contains-files? drive-data))
                                     (.getAbsolutePath file)))
         index-name (:index_name header)]
     {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))

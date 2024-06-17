@@ -3,6 +3,7 @@ include .env
 OUTPUT_DIR=_output
 TEMPLATE_DIR=templates
 ABSTRACTS_DIR=abstracts
+IMAGE_DIR=images
 DATA_DIR=data
 GOOGLE_CREDENTIALS=credentials.json
 
@@ -12,7 +13,7 @@ $(OUTPUT_DIR)/abstracts.tex: compile_abstracts.bb $(ABSTRACTS_DIR)/* $(TEMPLATE_
 	mkdir -p $(OUTPUT_DIR)
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format latex >$(OUTPUT_DIR)/abstracts.tex
 
-$(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(TEMPLATE_DIR)/*.latex
+$(OUTPUT_DIR)/book-of-abstracts.pdf: $(OUTPUT_DIR)/abstracts.tex $(TEMPLATE_DIR)/*.latex $(IMAGE_DIR)/*
 	cd $(OUTPUT_DIR) && \
 	xelatex ../$(TEMPLATE_DIR)/book-of-abstracts.latex && \
 	while grep -q 'Rerun to get' book-of-abstracts.log || grep -q 'LaTeX Warning: Label(s) may have changed' book-of-abstracts.log; do \

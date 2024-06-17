@@ -11,6 +11,8 @@
 \setmainfont{Palatino}
 \setsansfont{Optima}
 
+\usepackage{ifthen}
+
 \usepackage{needspace}
 \usepackage{marginnote}
 \renewcommand*{\marginfont}{\sffamily\footnotesize}
@@ -41,16 +43,25 @@
 
 \hypersetup{hidelinks}
 
+% Image credits
+% Paper icons created by Chanut - Flaticon
+% https://www.flaticon.com/free-icons/paper
+\newcommand{\printDocumentIcon}[2]{
+  \ifthenelse{\equal{#1}{true}}{
+    \href{#2}{\includegraphics[height=1em]{../images/document_icon.png}}
+  }{}
+}
+
 %% Based on LianTze Lim's template
 %% https://www.overleaf.com/latex/examples/a-basic-conference-abstract-booklet/tkjfcvzgjrnd
-\newenvironment{conf-abstract}[6][]{
+\newenvironment{conf-abstract}[7][]{
   \needspace{10\baselineskip}
   \begin{center}
     { \renewcommand\textsuperscript[1]{}
       \phantomsection\addcontentsline{toc}{section}
       {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
     }
-    {{\large\bfseries \href{#6}{#2}}\marginnote{#1}\par}
+    {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par\vspace{2.5mm}\printDocumentIcon{#7}{#6}}\par}
     \medskip
     {#3\par}
     \smallskip
@@ -92,7 +103,7 @@
 \title{Book of Abstracts}
 \author{8\textsuperscript{th} Conference of the International Association for Presocratic Studies}
 
-\titlepic{\includegraphics[width=0.6\textwidth]{../jpeg/Arte_Rogerio.jpeg}}
+\titlepic{\includegraphics[width=0.6\textwidth]{../images/Arte_Rogerio.jpeg}}
 
 \date{Belo Horizonte, July 1\textsuperscript{st} to 5\textsuperscript{th}, 2024\\
   Campus da Universidade Federal de Minas Gerais}

@@ -4,6 +4,7 @@
   {$institution$}
   {$if(email)$$email$$endif$}
   {$if(url)$$url$$endif$}
+  {$has_files$}
 \indexauthors{$if(index_name)$$index_name$@$endif$$last_name${,} $first_name$}
 $body$
 $if(biblio)$
