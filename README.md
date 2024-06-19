@@ -28,21 +28,7 @@ To generate the links to subfolders on a shared Drive folder, one per author nam
    - Configure the OAuth consent screen if prompted.
    - Choose **Desktop app** as the application type and click **Create**.
    - Download the `credentials.json` file and save it in the same directory as the script.
-3. **Generate `token.json`**:
-   - Go to the [OAuth2 Playground](https://developers.google.com/oauthplayground/).
-   - In the "Step 1" box, find and select "Google Drive API v3", then check the scopes you need (e.g., `https://www.googleapis.com/auth/drive`).
-   - Click **Authorize APIs** and sign in with your Google account.
-   - In "Step 2", click **Exchange authorization code for tokens**.
-   - Copy the access token and refresh token, and create a `token.json` file with the following structure:
-     ```json
-     {
-       "access_token": "your-access-token",
-       "refresh_token": "your-refresh-token",
-       "token_type": "Bearer",
-       "expires_in": 3599
-     }
-     ```
- 4. Set `GOOGLE_DRIVE_FOLDER_ID` in your `.env` file to the corresponding folder id.
+ 3. Set `GOOGLE_DRIVE_FOLDER_ID` in your `.env` file to the corresponding folder id.
 
 ### Example `.env` file
 
@@ -79,6 +65,14 @@ make deploy_pdf
 ```
 
 This will upload the PDF to the specified AWS S3 bucket.
+
+Before operating with the Google API, you have to get authorization:
+
+```sh
+make google_authorization
+```
+
+This will create or refresh the token stored in `token.json`.
 
 To create Google Drive subfolders using the author names:
 

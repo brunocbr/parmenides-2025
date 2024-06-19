@@ -37,6 +37,9 @@ clean:
 deploy_pdf: $(OUTPUT_DIR)/book-of-abstracts.pdf
 	aws s3 cp $(OUTPUT_DIR)/book-of-abstracts.pdf s3://$(AWS_S3_BUCKET_NAME)/$(PDF_TARGET_NAME)
 
+google_authorization:
+	bb token-refresh.bb $(GOOGLE_CREDENTIALS)
+
 create_drive_subfolders:
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format authors | \
 	bb create_drive_subfolders.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS)
