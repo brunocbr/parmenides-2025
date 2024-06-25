@@ -47,10 +47,9 @@
 % Paper icons created by Chanut - Flaticon
 % https://www.flaticon.com/free-icons/paper
 \newcommand{\printDocumentIcon}[2]{
-  \ifthenelse{\equal{#1}{true}}{
-    \href{#2}{\includegraphics[height=1em]{../images/document_icon.png}}
-  }{}
-}
+  \ifthenelse{\equal{#1}{true}}{%
+    \href{#2}{\includegraphics[height=1em,clip]{../images/document_icon.png}}%
+  }{}}
 
 %% Based on LianTze Lim's template
 %% https://www.overleaf.com/latex/examples/a-basic-conference-abstract-booklet/tkjfcvzgjrnd
@@ -61,7 +60,8 @@
       \phantomsection\addcontentsline{toc}{section}
       {\texorpdfstring{#2 (\emph{#3})}{#2 (#3)}}
     }
-    {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par\vspace{2.5mm}\printDocumentIcon{#7}{#6}}\par}
+    {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par%
+        \vspace{0.5em}\printDocumentIcon{#7}{#6}}\par}
     \medskip
     {#3\par}
     \smallskip
