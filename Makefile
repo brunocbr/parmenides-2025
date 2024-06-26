@@ -40,19 +40,19 @@ deploy_pdf: $(OUTPUT_DIR)/book-of-abstracts.pdf
 google_authorization:
 	bb token-refresh.bb $(GOOGLE_CREDENTIALS)
 
-create_drive_subfolders:
+create_drive_subfolders: google_authorization
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format authors | \
 	bb create_drive_subfolders.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS)
 
-generate_drive_links:
+generate_drive_links: google_authorization
 	bb generate_drive_links.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS) \
 		>$(DATA_DIR)/google_drive.edn
 
-send_drive_invitations:
+send_drive_invitations: google_authorization
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format emails | \
 	bb drive_invitations.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS)
 
-clean_drive_links:
+clean_drive_links: google_authorization
 	rm -f $(DATA_DIR)/google_drive.edn
 
 
