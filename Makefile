@@ -52,7 +52,7 @@ send_drive_invitations: google_authorization
 	bb compile_abstracts.bb --path $(ABSTRACTS_DIR) --format emails | \
 	bb drive_invitations.bb $(GOOGLE_DRIVE_FOLDER_ID) $(GOOGLE_CREDENTIALS)
 
-clean_drive_links: google_authorization
+clean_drive_links:
 	rm -f $(DATA_DIR)/google_drive.edn
 
 
