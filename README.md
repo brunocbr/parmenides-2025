@@ -66,6 +66,14 @@ make deploy_pdf
 
 This will upload the PDF to the specified AWS S3 bucket.
 
+To create a Word Document with the Program:
+
+```sh
+make program
+```
+
+This will create `program.docx`, which can be used for conference.
+
 Before operating with the Google API, you have to get authorization:
 
 ```sh
