@@ -59,13 +59,13 @@
         index-name (:index_name header)
         author (str (if index-name
                       index-name
-                      (:last_name header))
-                    "!" (:first_name header))]
+                      (:name_last header))
+                    "!" (:name_first header))]
     {:author author
      :contents (selmer/render
                 "#### {{author}}{% if institution %} ({{institution}}){% endif %}. {{title}}{% if email %} {{obfuscated-email|safe}}{% endif %}\n\n" ;; {{body}}\n\n
                 {:title (:title header)
-                 :author (str (:last_name header) ", " (:first_name header))
+                 :author (str (:name_last header) ", " (:name_first header))
                  :email (:email header)
                  :obfuscated-email (obfuscated-email-span (:email header))
                  :institution (:institution header)
@@ -84,7 +84,7 @@
     {:contents (selmer/render
                 "{{title}}  \n{{author}}{% if institution %}, {{institution}}{% endif %}"
                 {:title (:title header)
-                 :author (str (:first_name header) " " (:last_name header))
+                 :author (str (:name_first header) " " (:name_last header))
                  :institution (:institution header)})
      :session-id id
      :session-order order}))
@@ -126,7 +126,7 @@
   (let [header (read-yaml-header file)
         session-id (get-in header [:session :id])
         session (get-by-id session-id sessions)
-        fullname (str (:first_name header) " " (:last_name header))
+        fullname (str (:name_first header) " " (:name_last header))
         drive-data (get drive fullname)
         output (tasks/shell {:out :string}
                             (format "pandoc -t latex --template=templates/conf-abstract.latex -V date=\"%s\" -V time=\"%s\" -V url=\"%s\" -V has_files=\"%s\" \"%s\""
@@ -136,7 +136,7 @@
                                     (boolean (:contains-files? drive-data))
                                     (.getAbsolutePath file)))
         index-name (:index_name header)]
-    {:author (str (if index-name index-name (:last_name header)) "!" (:first_name header))
+    {:author (str (if index-name index-name (:name_last header)) "!" (:name_first header))
      :session session-id
      :order (get-in header [:session :order])
      :contents (:out output)}))
@@ -155,14 +155,14 @@
   (->>
    (for [f files]
      (let [h (read-yaml-header f)]
-       (str (:first_name h) " " (:last_name h))))
+       (str (:name_first h) " " (:name_last h))))
    (str/join "\n")))
 
 (defn process-author-emails [files]
   (->>
    (for [f files]
      (let [h (read-yaml-header f)]
-       {(str (:first_name h) " " (:last_name h))
+       {(str (:name_first h) " " (:name_last h))
         (str/split (:email h) #";\s+")}))
    (into {})
    pr-str))
