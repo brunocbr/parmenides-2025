@@ -1,12 +1,11 @@
 ---
-session:
-  id: 7
-  order: 1
-last_name: Costa
-first_name: Alexandre
-title: On the interdependence between contents and literary forms in Parmenides’ Poem
-institution: Universidade Federal Fluminense
 email: kaligraphia@yahoo.com.br
+institution: Universidade Federal FluminenseF
+keynote: false
+name_first: Alexandre
+name_last: Costa
+online: false
+title: Parmenides and the mutual exclusivity between being and coming-to-be
 ---
+Throughout all the Fragments that came to us from the Poem written by Parmenides, the author adopts a textual use of the verbs «to be» and «to come-to-be» that clearly operates a mutual exclusion between them, so that not only what is can not «come-to-be», but also that which comes- to-be can not «be». It is an incompatibility so precisely observed that both verbs are never presented side by side in the Parmenidean text, except for the purpose of clearly asserting their incompatibility, as in B8, 13-14, for example. This study aims to reassess whether the unrestricted incompatibility between being and coming-to-be recognised in Parmenides’ Poem can be seen as (a) an important key in a possible reordering of his Fragments; and (b) the main reason for distinguishing between truth and opinions, respectively.
 
-Starting from the identification and characterization of three literary forms that coexist throughout Parmenides' Poem, all of them plainly different from each other, it is proposed and demonstrated that such a variety of forms mirrors the delimitation of the different ways of thought and language elaborated by Parmenidic philosophy, in which at least two types of nature of knowledge must be recognized: the logical and the cosmological. The first, marked by a formally logical-argumentative speech which is given the name of truth (alétheia) and whose way of thinking is exclusively noetic; the second, of a theoretical-descriptive nature, dedicated to the consideration of the movement (*phroneîn*).

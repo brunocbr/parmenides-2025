@@ -8,8 +8,8 @@
 \usepackage[a4paper,margin=3cm,innermargin=3cm]{geometry}
 
 \usepackage{fontspec}
-\setmainfont{Palatino}
-\setsansfont{Optima}
+\setmainfont{Minion Pro}
+\setsansfont{Garamond Premier Pro}
 
 \usepackage{ifthen}
 
@@ -107,12 +107,12 @@
 \usepackage{titlepic}
 
 \title{Book of Abstracts}
-\author{8\textsuperscript{th} Conference of the International Association for Presocratic Studies}
+\author{The Language of Being, the Language of Nature: parmenides and His Receptions}
 
-\titlepic{\includegraphics[width=0.6\textwidth]{../images/Arte_Rogerio.jpeg}}
+\titlepic{\includegraphics[width=0.8\textwidth]{../images/parmenides_capa.jpg}}
 
-\date{Belo Horizonte, July 1\textsuperscript{st} to 5\textsuperscript{th}, 2024\\
-  Campus da Universidade Federal de Minas Gerais}
+\date{September 29\textsuperscript{th} to October 2\textsuperscript{nd}, 2025\\
+  Pontifícia Universidade Católica de São Paulo}
 
 \addto\captionsenglish{% Replace "english" with the language you use
   \renewcommand{\contentsname}%
@@ -166,56 +166,14 @@ Last Revised: \today
 
 \input{abstracts}
 
-\chapter{New Books}
-
-\section{First Session (Tuesday, July 2, 11h15-12h, Auditorium 104)}
-\begin{itemize}
-  \item Arnaud Macé, \emph{Les Éléates. Fragments des œuvres de Parménide, Zénon et Mélissos}. Traduits et présentés par Luc Brisson, Arnaud Macé et Jean-François Pradeau. Coll. Fragments. Paris: Les Belles Lettres, 2022.%
-    \printExternalLinkIcon{https://www.lesbelleslettres.com/livre/9782251452586/les-eleates}%
-    \indexauthors{Macé{,} Arnaud}
-  \item Arnaud Macé, \emph{Philosophy of Science Information System}: a participatory platform developed by the CDBP (Centre de Documentation et de Bibliographie Philosophiques) of the University of Franche-Comté.%
-    \printExternalLinkIcon{https://sips.univ-fcomte.fr/}%
-    \indexauthors{Macé{,} Arnaud}
-  \item Bruno L. Conte, \emph{A Doxa no poema de Parmênides}. Uma investigação a partir dos testemunhos antigos.
-São Paulo: Loyola, 2023.%
-    \printExternalLinkIcon{https://www.loyola.com.br/produto/a-doxa-no-poema-de-parmenides-uma-investigacao-a-partir-dos-testemunhos-antigos-5514}%
-     \indexauthors{Conte{,} Bruno Loureiro}
-  \item Richard McKirahan, Forthcoming: \emph{The Sophists}.
-    Ancient Philosophies Series. Routledge, 2024.\indexauthors{McKirahan{,} Richard}
-\end{itemize}
-
-\section{Second Session (Thursday, July 4, 11h15-12h, Auditorium 104)}
-\begin{itemize}
-  \item Livio Rossetti, \emph{Ripensare i Presocratici. Da Talete (anzi da Omero) à Zenone}.
-    Coll. Filosofie. Sesto San Giovanni: Mimesis, 2023.%
-    \printExternalLinkIcon{https://www.mimesisedizioni.it/libro/9788857598888}%
-    \indexauthors{Rossetti{,} Livio}
-  \item Nicholas Molinari, \emph{Acheloios, Thales, and the Origin of Philosophy: A response to the Neo Marxians}. Archaeopress, 2022.%
-    \printExternalLinkIcon{https://www.archaeopress.com/Archaeopress/Products/9781803270869}%
-    \indexauthors{Molinari{,} Nicholas J.}
-  \item Celso Vieira (org.). Forthcoming: \emph{Dossier: "Style Matters in Presocratic Philosophy"}, Revista Archai, 2024.\indexauthors{Vieira{,} Celso}
-  \item Alexandre Costa; Miriam Peixoto; Bruno Conte; Carolina Sánchez (orgs.). \emph{Estudos pré-socráticos na América Latina}. São Paulo: Odysseus, 2024.\printExternalLinkIcon{https://www.amazon.com/Estudos-pr\%C3\%A9-socr\%C3\%A1ticos-Am\%C3\%A9rica-Latina-Portuguese-ebook/dp/B0D8L55BPM}\indexauthors{Costa{,} Alexandre}\indexauthors{Peixoto{,} Miriam Campolina Diniz}\indexauthors{Sánchez Castro{,} Liliana Carolina}\indexauthors{Conte{,} Bruno Loureiro}
-\end{itemize}
 
 \chapter{Organizing Committee}
 
 \begin{center}
   \begin{tabular}{l}
-    President: \\
-    Miriam Campolina Diniz Peixoto \\
-    \\
-    Alexandre Costa \\
-    Bruno Loureiro Conte \\
-    Celso Vieira \\
-    Gustavo Laet Gomes \\
-    Henrique Buldrini \\
+    Mathilde Brémond \\
     Liliana Carolina Sánchez Castro \\
-    Luís Márcio Nogueira Fontes \\
-    Marcos Damásio \\
-    Martim Silva \\
-    Michel Menezes da Costa \\
-    Rogério Gimenes de Campos \\
-    Silvio Marino
+    Bruno Loureiro Conte
   \end{tabular}
 \end{center}
 
@@ -225,7 +183,7 @@ São Paulo: Loyola, 2023.%
 \begin{center}
   \begin{tabular}{l}
     \textbf{Cover Image:} \\ \\
-    \textit{Blue Moon}, Rogério Gimenes de Campos, 2023.
+    gallica.bnf.fr / Bibliothèque nationale de France. Département des manuscrits. Grec 1963
   \end{tabular}
 \end{center}
 

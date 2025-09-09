@@ -1,6 +1,6 @@
-# IAPS 8th Conference Book of Abstracts Generator
+# Parmenides SP '2025 Book of Abstracts Generator
 
-This repository contains the tools to generate the [Book of Abstracts](https://www.presocraticstudies.org/abstracts) for the 8th Conference of the International Association for Presocratic Studies (IAPS), and manage Google Drive presentation folders.
+This repository contains the tools to generate the Book of Abstracts for the conference "The language of being, the language of nature: Parmenides and hist receptions", and manage Google Drive presentation folders.
 
 ## Requirements
 

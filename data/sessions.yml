@@ -1,61 +1,87 @@
 ---
 sessions:
   - id: 1
-    date: 1 Jul
-    time: 10h15
+    date: 29 Sep
+    time: 09h15
   - id: 2
-    date: 1 Jul
-    time: 14h00
+    date: 29 Sep
+    time: 10h10
   - id: 3
-    date: 1 Jul
-    time: 14h35
+    date: 29 Sep
+    time: 11h25
   - id: 4
-    date: 1 Jul
-    time: 16h30
+    date: 29 Sep
+    time: 12h10
   - id: 5
-    date: 1 Jul
-    time: 16h30
+    date: 29 Sep
+    time: 14h25
   - id: 6
-    date: 2 Jul
-    time: 9h30
+    date: 29 Sep
+    time: 15h20
   - id: 7
-    date: 2 Jul
-    time: 9h30
+    date: 29 Sep
+    time: 16h35
   - id: 8
-    date: 2 Jul
-    time: 14h00
+    date: 29 Sep
+    time: 17h20
   - id: 9
-    date: 2 Jul
-    time: 14h00
+    date: 30 Sep
+    time: 09h15
   - id: 10
-    date: 2 Jul
-    time: 16h30
+    date: 30 Sep
+    time: 10h10
   - id: 11
-    date: 2 Jul
-    time: 16h30
+    date: 30 Sep
+    time: 11h25
   - id: 12
-    date: 4 Jul
-    time: 9h30
+    date: 30 Sep
+    time: 12h10
   - id: 13
-    date: 4 Jul
-    time: 9h30
+    date: 30 Sep
+    time: 14h25
   - id: 14
-    date: 4 Jul
-    time: 14h30
+    date: 30 Sep
+    time: 15h20
   - id: 15
-    date: 4 Jul
-    time: 14h00
+    date: 30 Sep
+    time: 16h35
   - id: 16
-    date: 4 Jul
-    time: 16h30
+    date: 30 Sep
+    time: 17h20
   - id: 17
-    date: 5 Jul
-    time: 10h00
+    date: 1 Oct
+    time: 09h00
   - id: 18
-    date: 5 Jul
-    time: 10h00
+    date: 1 Oct
+    time: 09h45
   - id: 19
-    date: 5 Jul
-    time: 14h00
+    date: 1 Oct
+    time: 11h00
+  - id: 20
+    date: 1 Oct
+    time: 11h55
+  - id: 21
+    date: 2 Oct
+    time: 09h15
+  - id: 22
+    date: 2 Oct
+    time: 10h10
+  - id: 23
+    date: 2 Oct
+    time: 11h25
+  - id: 24
+    date: 2 Oct
+    time: 12h10
+  - id: 25
+    date: 2 Oct
+    time: 14h25
+  - id: 26
+    date: 2 Oct
+    time: 15h20
+  - id: 27
+    date: 2 Oct
+    time: 16h35
+  - id: 28
+    date: 2 Oct
+    time: 17h20
 ---
-

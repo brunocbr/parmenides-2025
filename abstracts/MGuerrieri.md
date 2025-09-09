@@ -1,12 +1,10 @@
 ---
-session:
-  id: 7
-  order: 3
-last_name: Guerrieri
-first_name: Marco
-title: διάκοσμος ἐοικώς πάντα? A new interpretation of Parm. 28 B 1, 7, 8 DK
-institution: Università degli Studi di Napoli “Federico II”
 email: marco.bellatores@gmail.com
+institution: Federico II University of Naples
+keynote: false
+name_first: Marco
+name_last: Guerrieri
+online: true
+title: Parmenides as a Poet
 ---
-
-The current arrangement of Parmenides’ extant fragments has been established in the fifth edition of *Die Fragmente der Vorsokratiker*, the first to be curated by Walther Kranz (1934). This order considerably differs from the one that previous editors used, from Brandis (1813) to Diels. Nevertheless, to the present day, Kranz’s text has (almost) never been questioned. In this paper, I explore the main differences in the text before and after Kranz, specifically concerning the composition of pivotal fragments 28 B 1 and 7/8 DK. Indeed, Kranz implemented the following interventions: 1. Dividing the proem, testified by Sextus Empiricus, into two parts; 2. Enumerating the second part, i.e. its last six verses, as fr. 7; 3. Attaching these last verses to fr. 8 to create only one fr. 7/8 DK. Therefore, this paper addresses three main tasks: 1. Explaining the justification behind Kranz’s editorial changes to the text; 2. Demonstrating both the philosophical and philological reasons in favor of a return to the text of the proem quoted by Sextus Empiricus; 3. Arguing for a new philological intervention in the restored Greek text of the proem, by suggesting that a very simple *saut du même à même* could be the reason why the proem, as quoted by Sextus, lacks an important verse that is testified by Plato. In this last point, I also advocate for an interpretation of the poem’s division in two parts, starting from the new (or old) Greek text and examining the meaning of the much-debated adverb δοκίμως (28 B 1, 32) within it.
+In recent years, significant progress has been made in interpreting Parmenides’ philosophy. If Casertano (1978) had already surpassed the old interpretation of Parmenides as a denier of movement and existence of worldly things, but also portrayed the Eleatic as a “mere” scientist, further research continued to shed light on the Venerable philosopher – from N.-L. Cordero to B. Conte, from J. Palmer to S. Tor. Parmenides clearly turns out to have never denied the world: thus, this paper embraces this recent view to propose an explanation of the most-debated problem of the Eleatic’s thought, i.e. the relationship between Truth and Opinion, and between What-is and Phenomena. In order to do so, and to try to solve some crucial aporias in this difficult matter, this paper will adopt the fundamental – yet often overlooked – approach of considering Parmenides for who he was: a poet. In a world where Plato had not yet renewed the meaning of the word φιλοσοφία, and thoughts were still rarely expressed in prose, it is crucial to analyse how the Eleatic actually conceived his work of art. In particular, the main topic of the paper will be the analysis of three specific figures of speech as used by Parmenides: comparison, synecdoche, and hysteron proteron. Reflecting on the almost never considered use of these three poetic strategies could offer a chance of proposing a precise interpretation of the whole of Parmenides’ poem, and of solving some problems that always challenged the scholarship. In conclusion, by unveiling the poetic structure of his work and considering contemporary research findings, it could be possible to provide a fresh perspective on Parmenides’ philosophical vision.
