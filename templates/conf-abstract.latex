@@ -1,11 +1,11 @@
 \begin{conf-abstract}[$if(session)$$date$\\$time$\\Session $session.id$$endif$]
   {$title$}
-  {$first_name$ $last_name$}
+  {$name_first$ $name_last$}
   {$institution$}
   {$if(email)$$email$$endif$}
   {$if(url)$$url$$endif$}
   {$has_files$}
-\indexauthors{$if(index_name)$$index_name$@$endif$$last_name${,} $first_name$}
+\indexauthors{$if(index_name)$$index_name$@$endif$$name_last${,} $name_first$}
 $body$
 $if(biblio)$
 \begin{abstractbibliography}
