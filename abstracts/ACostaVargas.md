@@ -1,4 +1,6 @@
 ---
+session:
+  id: 28
 email: antoniov@gmail.com
 institution: "Universidade de Brasília"
 keynote: false

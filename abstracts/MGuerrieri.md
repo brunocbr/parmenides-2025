@@ -1,4 +1,6 @@
 ---
+session:
+  id: 4
 email: marco.bellatores@gmail.com
 institution: Federico II University of Naples
 keynote: false

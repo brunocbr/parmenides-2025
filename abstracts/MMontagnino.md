@@ -1,4 +1,6 @@
 ---
+session:
+  id: 12
 email: mmontagnino@inwind.it
 institution: Università degli Studi di Palermo
 keynote: false

@@ -1,4 +1,6 @@
 ---
+session:
+  id: 27
 email: andrebragart@yahoo.com.br
 institution: Universidade Estadual do Norte do Paraná
 keynote: false

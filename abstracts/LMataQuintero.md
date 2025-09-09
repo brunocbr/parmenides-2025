@@ -1,4 +1,6 @@
 ---
+session:
+  id: 3
 email: luismataquintero@gmail.com
 institution: "Universidad de Costa Rica"
 keynote: false

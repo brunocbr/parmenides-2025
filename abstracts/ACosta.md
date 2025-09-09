@@ -1,4 +1,6 @@
 ---
+session:
+  id: 15
 email: kaligraphia@yahoo.com.br
 institution: Universidade Federal Fluminense
 keynote: false

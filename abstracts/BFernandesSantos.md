@@ -1,4 +1,6 @@
 ---
+session:
+  id: 26
 email: fernandes_bruno@id.uff.br
 institution: "Universidade Federal Fluminense"
 keynote: false

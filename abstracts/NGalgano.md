@@ -1,4 +1,6 @@
 ---
+session:
+  id: 18
 email: nicolagalgano@usp.br
 institution: Universidade de São Paulo
 keynote: false

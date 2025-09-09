@@ -1,4 +1,6 @@
 ---
+session:
+  id: 11
 email: nazarenoeduardo@gmail.com
 institution: Universidade Federal de Santa Catarina
 keynote: false

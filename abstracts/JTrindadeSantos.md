@@ -1,4 +1,6 @@
 ---
+session:
+  id: 10
 email: jtrin41@gmail.com
 institution: Universidade Federal do Ceará
 keynote: false

@@ -1,4 +1,6 @@
 ---
+session:
+  id: 6
 email: victoria.n.hsu@gmail.com
 institution: CUNY Graduate Center
 keynote: false

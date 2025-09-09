@@ -1,4 +1,6 @@
 ---
+session:
+  id: 7
 email: david.sider@nyu.edu
 institution: New York University
 keynote: false

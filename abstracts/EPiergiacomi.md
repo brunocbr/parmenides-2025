@@ -1,4 +1,6 @@
 ---
+session:
+  id: 22
 email: epiergiacomi@fbk.eu
 institution: Technion – Israel Institute of Technology
 keynote: false

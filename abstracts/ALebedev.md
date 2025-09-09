@@ -1,11 +1,13 @@
 ---
+session:
+  id: 2
 email: anlebedev@gmail.com
 institution: University of Crete
 keynote: false
 name_first: Andrei V.
 name_last: Lebedev
 online: true
-title: Textual and hermeneutic notes on Parmenides' Proem.
+title: Textual and hermeneutic notes on Parmenides' Proem
 ---
 1.2-3 ὁδὸν... δαίμονος ... ἣ κατὰ πάντα \<πο\>τῆι φέρει εἰδότα φῶτα. "the road of the goddess that carries the man of knowledge by flight across the Universe." Ποτή is a Homeric word attested in *Odyssey* 5.337: Leucothea, feeling compassion for Odysseus᾽ troubles, transformed herself into a diving-bird and «ascended from sea by flight» (ποτῆι ἀνεδύσατο λίμνης), then sat on the raft. Lexicographers gloss the word as πτῆσις, sometimes as ὁρμή. In Aratus the constellation of Cygnus «flies like bird» (ποτὴν ὄρνιθι ἐοικὼς ... φέρεται), ποτή again is combined with the same verb as in Parmenides (φέρεσθαι). Since the word ποτή is regularly associated with the flight of birds and wings (in Hymn. Mercur. 544 ποτῆισι is v. l. for πτερύγεσσι), the chariot of Kouros should be envisaged as a winged chariot, and so the similarity with Plato's comparison of the soul with ὑπόπτερον ζεῦγος καὶ ἡνίοχος in Phaedrus 246 a 3--b 4 becomes striking. The connection was recognized already by Hermias, In Platonis Phaedrum 122, 19 ff., and by some modern scholars, Hermann Diels and Paul Natorp among others .
 

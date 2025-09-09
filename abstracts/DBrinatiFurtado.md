@@ -1,4 +1,6 @@
 ---
+session:
+  id: 23
 email: danibrinati.f@gmail.com
 institution: Universidade Federal de Minas Gerais
 keynote: false

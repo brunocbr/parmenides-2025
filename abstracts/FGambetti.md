@@ -1,4 +1,6 @@
 ---
+session:
+  id: 24
 email: francesca.gambetti@uniroma1.it
 institution: Sapienza University of Rome
 keynote: false
