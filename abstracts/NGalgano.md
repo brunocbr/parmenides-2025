@@ -1,6 +1,6 @@
 ---
 email: nicolagalgano@usp.br
-institution: USP
+institution: Universidade de São Paulo
 keynote: false
 name_first: Nicola
 name_last: Galgano

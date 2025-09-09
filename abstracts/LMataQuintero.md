@@ -1,6 +1,6 @@
 ---
 email: luismataquintero@gmail.com
-institution: "Universidad de Costa Rica, Escuela de Filosofía"
+institution: "Universidad de Costa Rica"
 keynote: false
 name_first: Luis Enrique
 name_last: Mata Quintero

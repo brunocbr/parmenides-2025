@@ -1,6 +1,6 @@
 ---
 email: andrebragart@yahoo.com.br
-institution: Northern Parana State University (UENP) - Brazil
+institution: Universidade Estadual do Norte do Paraná
 keynote: false
 name_first: Andre Luiz
 name_last: Braga da Silva

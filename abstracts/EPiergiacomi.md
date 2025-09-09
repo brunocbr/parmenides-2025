@@ -1,6 +1,6 @@
 ---
 email: epiergiacomi@fbk.eu
-institution: Technion | Israel Institute of Technology
+institution: Technion – Israel Institute of Technology
 keynote: false
 name_first: Enrico
 name_last: Piergiacomi

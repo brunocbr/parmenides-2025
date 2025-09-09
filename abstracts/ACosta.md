@@ -1,6 +1,6 @@
 ---
 email: kaligraphia@yahoo.com.br
-institution: Universidade Federal FluminenseF
+institution: Universidade Federal Fluminense
 keynote: false
 name_first: Alexandre
 name_last: Costa

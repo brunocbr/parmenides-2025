@@ -8,7 +8,7 @@ online: true
 title: "Parmenides’ χάσμ’ ἀχανές: Projecting the Underworld into the Heavens"
 biblio:
   - "Beek, L. van. 2018. “Ἄτλας ἀστεμφής: Traces of local particles in Greek compoundsand the origins of intensive alpha”. Glotta 94: 38-81."
-  - "Burkert, W. 2013. “Parmenides’ Proem and Pythagoras’ Descent.” Trans. by JoydeepBagchee. In Philosophy and Salvation in Greek Religion, 85-116. Berlin."
+  - "Burkert, W. 2013. “Parmenides’ Proem and Pythagoras’ Descent.” Trans. by Joydeep Bagchee. In Philosophy and Salvation in Greek Religion, 85-116. Berlin."
   - "Kern, O. ed. 1922. Orphicorum fragmenta. apud Weidmannos.
 Kingsley, P. 1995. Ancient philosophy, mystery, and magic: Empedocles andPythagorean tradition. Oxford; New York: Oxford University Press."
   - "Mansfeld, J. 1964. Die Offenbarung des Parmenides und die menschliche Welt. Assen."

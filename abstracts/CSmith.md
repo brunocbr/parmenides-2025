@@ -1,6 +1,6 @@
 ---
 email: colinclarksmith@gmail.com
-institution: Ohio State University (US)
+institution: Ohio State University
 keynote: false
 name_first: Colin
 name_last: Smith
