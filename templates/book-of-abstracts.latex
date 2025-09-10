@@ -127,16 +127,9 @@
 
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{afterpage}
 
-\usepackage{titlepic}
-
-\title{Book of Abstracts}
-\author{The Language of Being, the Language of Nature: Parmenides and His Receptions}
-
-\titlepic{\includegraphics[width=0.8\textwidth]{../images/parmenides_capa.jpg}}
-
-\date{September 29\textsuperscript{th} to October 2\textsuperscript{nd}, 2025\\
-  Pontifícia Universidade Católica de São Paulo}
+\definecolor{darkslategray}{RGB}{15,45,73}
 
 \addto\captionsenglish{% Replace "english" with the language you use
   \renewcommand{\contentsname}%
@@ -158,12 +151,16 @@
 
 \begin{document}
 
-% \pagecolor{paleyellow}
-% \color{darkred}
-
 \frontmatter
 
-\maketitle
+\begin{titlepage}
+  \newgeometry{left=0.1in,right=0.1in,top=0.1in,bottom=0.1in}
+  \pagecolor{darkslategray}\afterpage{\nopagecolor}
+  \centering
+  \includegraphics[width=\textwidth]{../images/parmenides_capa.jpg}
+\end{titlepage}
+
+\restoregeometry
 
 \tableofcontents
 
