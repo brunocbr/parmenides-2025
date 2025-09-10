@@ -3,7 +3,7 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 
-\documentclass[12pt]{book}
+\documentclass[12pt,oneside]{book}
 
 \usepackage[a4paper,margin=3cm,innermargin=3cm]{geometry}
 
@@ -23,6 +23,8 @@
   \usepackage[]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+
+\usepackage{soul}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -80,28 +82,22 @@
   \bigskip
 }
 
-\DeclareTextSymbol{\textstar}{\UnicodeEncodingName}{"1383}
-
 \newenvironment{keynote-conf-abstract}[7][]{
   \needspace{10\baselineskip}
   \begin{center}
-    \fcolorbox{white}{yellow!20}{% Adiciona um fundo amarelo claro
-      \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax} % Ajusta a largura do minipage
-        \centering % Assegura centralização
-            { \renewcommand\textsuperscript[1]{}
-              \phantomsection\addcontentsline{toc}{section}
-                                             {\texorpdfstring{#2 (\emph{#3}) $ \star $}{#2 (#3)}}
-            }
-            {\bfseries\scshape keynote\par\smallskip}
-            {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par%
-                \vspace{0.5em}\printDocumentIcon{#7}{#6}}\par}
-            \medskip
-            {#3\par}
-            \smallskip
-            {#4\par}
-            \smallskip
-            {\small \href{mailto:#5}{#5}\par}
-    \end{minipage}}
+    { \renewcommand\textsuperscript[1]{}
+      \phantomsection\addcontentsline{toc}{section}
+                                     {\texorpdfstring{#2 (\emph{#3}) $ \star $}{#2 (#3)}}
+    }
+    {\bfseries\scshape\so{keynote}\par\medskip}
+    {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par%
+        \vspace{0.5em}\printDocumentIcon{#7}{#6}}\par}
+    \medskip
+    {#3\par}
+    \smallskip
+    {#4\par}
+    \smallskip
+    {\small \href{mailto:#5}{#5}\par}
   \end{center}
 }{%
   \bigskip
