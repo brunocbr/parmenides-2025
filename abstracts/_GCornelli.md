@@ -7,6 +7,6 @@ keynote: true
 name_first: Gabriele
 name_last: Cornelli
 online: false
-title: Female Figures on the Path of Parmenides
+title: Parmenides underground? Back to the *katábasis* in the Proem
 ---
-In the Prologue of Parmenides' Poem, there is a notable, perhaps exclusive, presence of female guides and companions: mares (*híppoi*) and maidens (*koûrai*), but especially the "daughters of the Sun" and two specific goddesses, one named, the other not. I will argue that the female presence is directly dependent on the Orphic setting of these initial verses of the Poem and the journey described therein.
+Almost two decades ago I wrote a seminal paper on *The descent of Parmenides: geo-philo\-sophical notes on the margins of the Proem* addressing constant references to practices of katabasis, the descent into the world of the dead in the three most significant pre-Socratic philosophers, Pythagoras, Empedocles and Parmenides. I noticed back then that the latter is the least related to this and other practices generally associated with Orphic traditions. However, the Proem to Parmenides\' Poem revealed itself to be in clear continuity with Orphic mythology, Pythagorean philosophical traditions, and katabatic practices. Ancient philosophical literature, therefore, demonstrated an understanding of the mystical exercise of katabasis as a fundamental moment in the intellectual journey of the wise man\'s formation. With this "return to *katábasis*", I intend to evaluate the literature on the subject produced over the last two decades and reposition myself in relation to it.
