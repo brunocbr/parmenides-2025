@@ -9,8 +9,7 @@
 
 \usepackage{fontspec}
 \setmainfont{Minion Pro}
-\setsansfont{Garamond Premier Pro}
-
+\setsansfont{Myriad Pro}
 \usepackage{ifthen}
 
 \usepackage{needspace}
@@ -87,7 +86,7 @@
   \begin{center}
     { \renewcommand\textsuperscript[1]{}
       \phantomsection\addcontentsline{toc}{section}
-                                     {\texorpdfstring{#2 (\emph{#3}) $ \star $}{#2 (#3)}}
+                                     {\texorpdfstring{\textsc{keynote:} #2 (\emph{#3})}{#2 (#3)}}
     }
     {\bfseries\scshape\so{keynote}\par\medskip}
     {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par%
