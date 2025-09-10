@@ -24,7 +24,6 @@
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 
-
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
@@ -80,6 +79,36 @@
   \hrule
   \bigskip
 }
+
+\DeclareTextSymbol{\textstar}{\UnicodeEncodingName}{"1383}
+
+\newenvironment{keynote-conf-abstract}[7][]{
+  \needspace{10\baselineskip}
+  \begin{center}
+    \fcolorbox{white}{yellow!20}{% Adiciona um fundo amarelo claro
+      \begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax} % Ajusta a largura do minipage
+        \centering % Assegura centralização
+            { \renewcommand\textsuperscript[1]{}
+              \phantomsection\addcontentsline{toc}{section}
+                                             {\texorpdfstring{#2 (\emph{#3}) $ \star $}{#2 (#3)}}
+            }
+            {\bfseries\scshape keynote\par\smallskip}
+            {{\large\bfseries \href{#6}{#2}}\marginnote{#1\par%
+                \vspace{0.5em}\printDocumentIcon{#7}{#6}}\par}
+            \medskip
+            {#3\par}
+            \smallskip
+            {#4\par}
+            \smallskip
+            {\small \href{mailto:#5}{#5}\par}
+    \end{minipage}}
+  \end{center}
+}{%
+  \bigskip
+  \hrule
+  \bigskip
+}
+
 
 \newenvironment{abstractbibliography}
                {\small%

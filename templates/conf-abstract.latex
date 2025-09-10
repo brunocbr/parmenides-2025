@@ -1,4 +1,4 @@
-\begin{conf-abstract}[$if(session)$$date$\\$time$\\Session $session.id$$endif$]
+\begin{$if(keynote)$keynote-conf-abstract$else$conf-abstract$endif$}[$if(session)$$date$\\$time$\\Session $session.id$$endif$]
   {$title$}
   {$name_first$ $name_last$}
   {$institution$}
@@ -14,5 +14,5 @@ $if(biblio)$
   $endfor$
 \end{abstractbibliography}
 $endif$
-\end{conf-abstract}
+\end{$if(keynote)$keynote-conf-abstract$else$conf-abstract$endif$}
 
