@@ -98,6 +98,14 @@ make generate_drive_links
 
 This will create a database containing the links to the author subfolders, which will be used if available in the generation of the Book of Abstracts.
 
+To update the PDF with Google Drive information:
+
+```sh
+make update
+```
+
+This will update the database, generate the PDF and deploy it.
+
 After the subfolders are created, you may send invitations to the authors:
 
 ```sh

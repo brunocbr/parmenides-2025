@@ -55,4 +55,5 @@ send_drive_invitations: google_authorization
 clean_drive_links:
 	rm -f $(DATA_DIR)/google_drive.edn
 
+update: generate_drive_links book deploy_pdf
 
