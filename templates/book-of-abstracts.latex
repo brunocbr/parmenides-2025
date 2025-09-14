@@ -129,7 +129,7 @@
 \usepackage{xcolor}
 \usepackage{afterpage}
 
-\definecolor{darkslategray}{RGB}{15,45,73}
+\definecolor{darkslategray}{RGB}{15,45,72}
 
 \addto\captionsenglish{% Replace "english" with the language you use
   \renewcommand{\contentsname}%
